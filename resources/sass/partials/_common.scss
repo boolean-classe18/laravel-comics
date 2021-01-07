@@ -1,0 +1,31 @@
+body {
+    font-family: $text_font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title_font;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.container::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+a {
+    text-decoration: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.jumbotron {
+    background-image: url('/images/jumbotron.jpg');
+    padding: 200px 0;
+}
