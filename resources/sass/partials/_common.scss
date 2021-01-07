@@ -21,6 +21,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin: 0;
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -28,4 +32,14 @@ a {
 .jumbotron {
     background-image: url('/images/jumbotron.jpg');
     padding: 200px 0;
+}
+
+.section-title h2 {
+    margin: 0;
+    background-color: $main_color;
+    color: white;
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px 30px;
+    transform: translateY(-50%);
 }

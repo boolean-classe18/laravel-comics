@@ -407,6 +407,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -414,6 +418,16 @@ a {
 .jumbotron {
   background-image: url("/images/jumbotron.jpg");
   padding: 200px 0;
+}
+
+.section-title h2 {
+  margin: 0;
+  background-color: #0282F9;
+  color: white;
+  display: inline-block;
+  font-size: 30px;
+  padding: 10px 30px;
+  transform: translateY(-50%);
 }
 
 header ul {
@@ -484,5 +498,34 @@ header .header-bottom .navbar li a.active,
 header .header-bottom .navbar li a:hover {
   color: #0282F9;
   border-bottom: 5px solid #0282F9;
+}
+
+#series {
+  background-color: #1C1C1C;
+  color: #ffffff;
+}
+
+#series .comic-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#series .comic-container .comic {
+  flex-basis: 185px;
+}
+
+#series .comic-container .comic .comic-image {
+  width: 185px;
+  height: 185px;
+}
+
+#series .comic-container .comic .comic-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
