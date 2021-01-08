@@ -21,6 +21,21 @@ Route::get('/', function () {
     return view('home', $data);
 })->name('homepage');
 
+Route::get('/comic/{id}', function($id) {
+    // recupero tutti i fumetti
+    $comics = config('comics');
+    // verifico che l'id sia una chiave valida
+    if(array_key_exists($id, $comics)) {
+        // recupero il fumetto corrispondente all'id presente nell'url
+        $fumetto = $comics[$id];
+        $data = [
+            'comic' => $fumetto
+        ];
+        return view('single', $data);
+    }
+    abort(404);
+})->name('comic-details');
+
 Route::get('/contact-us', function() {
     return view('contact');
 });

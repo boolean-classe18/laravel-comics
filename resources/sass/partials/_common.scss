@@ -11,7 +11,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto;
 }
 
-.container::after {
+.small-container {
+    max-width: 1020px;
+    margin: auto;
+}
+
+.container::after, .small-container::after {
     clear: both;
     content: '';
     display: table;
@@ -24,6 +29,7 @@ a {
 .button {
     background: $main_color;
     color: $main_bg_text_color;
+    display: inline-block;
     font-family: "Open Sans Condensed", sans-serif;
     font-weight: 700;
     padding: 10px 60px;

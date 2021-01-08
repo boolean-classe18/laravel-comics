@@ -397,7 +397,13 @@ h6 {
   margin: auto;
 }
 
-.container::after {
+.small-container {
+  max-width: 1020px;
+  margin: auto;
+}
+
+.container::after,
+.small-container::after {
   clear: both;
   content: "";
   display: table;
@@ -405,6 +411,16 @@ h6 {
 
 a {
   text-decoration: none;
+}
+
+.button {
+  background: #0282F9;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+  padding: 10px 60px;
+  text-transform: uppercase;
 }
 
 p {
@@ -665,17 +681,59 @@ header .header-bottom .navbar li a:hover {
   flex-basis: 185px;
 }
 
-#series .comic-container .comic .comic-image {
+#series .comic-container .comic a {
+  color: #ffffff;
+  display: inline-block;
+}
+
+#series .comic-container .comic a .comic-image {
   width: 185px;
   height: 185px;
 }
 
-#series .comic-container .comic .comic-image img {
+#series .comic-container .comic a .comic-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+
+.comic-thumb {
+  background-color: #0282F9;
+}
+
+.comic-thumb .comic-thumb-container {
+  position: relative;
+  padding: 50px 0;
+}
+
+.comic-thumb .comic-thumb-container .comic-thumb-wrapper {
+  position: absolute;
+  bottom: 20px;
+  border: 1px solid #fff;
+}
+
+.comic-thumb .comic-thumb-container .comic-thumb-wrapper span {
+  position: absolute;
+  background-color: #0282F9;
+  color: #fff;
+}
+
+.comic-thumb .comic-thumb-container .comic-thumb-wrapper span.comic-type {
+  top: 0;
+  left: 0;
+}
+
+.comic-thumb .comic-thumb-container .comic-thumb-wrapper span.comic-gallery {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.comic-thumb .comic-thumb-container .comic-thumb-wrapper img {
+  display: block;
 }
 
