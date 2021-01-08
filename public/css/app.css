@@ -381,6 +381,7 @@ template {
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 14px;
 }
 
 h1,
@@ -533,7 +534,7 @@ header .header-bottom .navbar li a:hover {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
 }
 
 .footer-top .footer-top-inner .footer-top-upper .footer-top-menu {
@@ -605,7 +606,7 @@ header .header-bottom .navbar li a:hover {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
 }
 
 .footer-bottom .social .social-title {
@@ -735,5 +736,177 @@ header .header-bottom .navbar li a:hover {
 
 .comic-thumb .comic-thumb-container .comic-thumb-wrapper img {
   display: block;
+}
+
+#comic-main {
+  padding: 100px 0;
+}
+
+#comic-main .comic-info {
+  float: left;
+  width: calc(100% / 3 * 2);
+}
+
+#comic-main .comic-info h1 {
+  color: #003f5e;
+}
+
+#comic-main .comic-info .comic-availability-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #55ba59;
+  border-bottom: 1px solid #357739;
+  font-weight: 600;
+}
+
+#comic-main .comic-info .comic-availability-container .price,
+#comic-main .comic-info .comic-availability-container .avalability,
+#comic-main .comic-info .comic-availability-container .check {
+  padding: 15px;
+}
+
+#comic-main .comic-info .comic-availability-container .price {
+  flex-grow: 2;
+}
+
+#comic-main .comic-info .comic-availability-container .avalability {
+  border-right: 1px solid #357739;
+}
+
+#comic-main .comic-info .comic-availability-container .price,
+#comic-main .comic-info .comic-availability-container .avalability {
+  color: #bafd9c;
+}
+
+#comic-main .comic-info .comic-availability-container .comic-price,
+#comic-main .comic-info .comic-availability-container .check {
+  color: #fff;
+}
+
+#comic-main .comic-info .comic-description {
+  line-height: 1.8;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+#comic-main .comic-adv {
+  float: left;
+  width: calc(100% / 3);
+  text-align: right;
+}
+
+#comic-details {
+  background-color: #F6F6F6;
+}
+
+#comic-details .talent,
+#comic-details .specs {
+  width: calc(50% - 15px);
+  box-sizing: border-box;
+  float: left;
+}
+
+#comic-details .talent h2,
+#comic-details .specs h2 {
+  color: #003f5e;
+}
+
+#comic-details .talent ul,
+#comic-details .specs ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#comic-details .talent ul li,
+#comic-details .specs ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  border-top: 1px solid #e3e3e3;
+  padding: 5px 0;
+  font-weight: 600;
+}
+
+#comic-details .talent ul li span:first-child,
+#comic-details .specs ul li span:first-child {
+  min-width: calc(100% / 3);
+  max-width: calc(100% / 3);
+  flex-grow: 1;
+  color: #003f5e;
+}
+
+#comic-details .talent ul li span:last-child,
+#comic-details .specs ul li span:last-child {
+  flex-grow: 2;
+}
+
+#comic-details .talent ul li a,
+#comic-details .specs ul li a {
+  color: #0282F9;
+}
+
+#comic-details .talent {
+  margin-right: 15px;
+}
+
+#comic-details .specs {
+  margin-left: 15px;
+}
+
+#comic-details .icon-box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#comic-details .icon-box-container .icon-box {
+  border: 1px solid black;
+  flex-grow: 1;
+}
+
+#comic-details .icon-box-container .icon-box .icon-box-image {
+  background-image: url("/images/cta-icons.png");
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+}
+
+#comic-details .icon-box-container .icon-box:nth-child(1) .icon-box-image {
+  background-position: 0px 0;
+}
+
+#comic-details .icon-box-container .icon-box:nth-child(1):hover .icon-box-image {
+  background-position: 0px 37px;
+}
+
+#comic-details .icon-box-container .icon-box:nth-child(2) .icon-box-image {
+  background-position: 37px 0;
+}
+
+#comic-details .icon-box-container .icon-box:nth-child(2):hover .icon-box-image {
+  background-position: 37px 37px;
+}
+
+#comic-details .icon-box-container .icon-box:nth-child(3) .icon-box-image {
+  background-position: 74px 0;
+}
+
+#comic-details .icon-box-container .icon-box:nth-child(3):hover .icon-box-image {
+  background-position: 74px 37px;
+}
+
+#comic-details .icon-box-container .icon-box:nth-child(4) .icon-box-image {
+  background-position: 111px 0;
+}
+
+#comic-details .icon-box-container .icon-box:nth-child(4):hover .icon-box-image {
+  background-position: 111px 37px;
 }
 

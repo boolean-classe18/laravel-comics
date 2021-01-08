@@ -66,3 +66,173 @@
         }
     }
 }
+
+#comic-main {
+    padding: 100px 0;
+
+    .comic-info {
+        float: left;
+        width: calc(100% / 3 * 2);
+
+        h1 {
+            color: $title_color;
+        }
+
+        .comic-availability-container {
+            @include flexbox;
+            background-color: #55ba59;
+            border-bottom: 1px solid #357739;
+            font-weight: 600;
+
+            .price, .avalability, .check {
+                padding: 15px;
+            }
+
+            .price {
+                flex-grow: 2;
+            }
+
+            .avalability {
+                border-right: 1px solid #357739;
+            }
+
+            .price, .avalability {
+                color: #bafd9c;
+            }
+
+            .comic-price, .check {
+                color: #fff;
+            }
+        }
+
+        .comic-description {
+            line-height: 1.8;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+    }
+
+    .comic-adv {
+        float:left;
+        width: calc(100% / 3);
+        text-align: right;
+    }
+}
+
+#comic-details {
+    background-color: #F6F6F6;
+
+    .talent, .specs {
+        width: calc(50% - #{$column_spacing});
+        box-sizing: border-box;
+        float: left;
+
+        h2 {
+            color: $title_color;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                @include flexbox(row, flex-start, flex-start);
+                border-top: 1px solid #e3e3e3;
+                padding: 5px 0;
+                font-weight: 600;
+
+                span:first-child {
+                    min-width: calc(100% / 3);
+                    max-width: calc(100% / 3);
+                    flex-grow: 1;
+                    color: $title_color;
+                }
+
+                span:last-child {
+                    flex-grow: 2;
+                }
+
+                a {
+                    color: $main_color;
+                }
+            }
+        }
+    }
+
+    .talent {
+        margin-right: $column_spacing;
+    }
+
+    .specs {
+        margin-left: $column_spacing;
+    }
+
+    .icon-box-container {
+        @include flexbox;
+
+        .icon-box {
+            border: 1px solid black;
+            flex-grow: 1;
+
+            .icon-box-image {
+                background-image: url('/images/cta-icons.png');
+                display: inline-block;
+                width: $icon_box_image_size;
+                height: $icon_box_image_size;
+            }
+
+            @for $i from 0 through 3 {
+                &:nth-child(#{$i + 1}){
+                    .icon-box-image {
+                        background-position: $icon_box_image_size * $i 0;
+                    }
+
+                    &:hover .icon-box-image {
+                        background-position: $icon_box_image_size * $i $icon_box_image_size;
+                    }
+                }
+            }
+            //
+            // &:nth-child(1){
+            //     .icon-box-image {
+            //         background-position: 0 0;
+            //     }
+            //
+            //     &:hover .icon-box-image {
+            //         background-position: 0 37px;
+            //     }
+            // }
+            //
+            // &:nth-child(2) {
+            //     .icon-box-image {
+            //         background-position: 37px 0;
+            //     }
+            //
+            //     &:hover .icon-box-image {
+            //         background-position: 37px 37px;
+            //     }
+            // }
+            //
+            // &:nth-child(3) {
+            //     .icon-box-image {
+            //         background-position: 74px 0;
+            //     }
+            //
+            //     &:hover .icon-box-image {
+            //         background-position: 74px 37px;
+            //     }
+            // }
+            //
+            // &:nth-child(4) {
+            //     .icon-box-image {
+            //         background-position: 111px 0;
+            //     }
+            //
+            //     &:hover .icon-box-image {
+            //         background-position: 111px 37px;
+            //     }
+            // }
+        }
+
+    }
+}
