@@ -22,6 +22,52 @@
                         </a>
                     </div>
                 @endforeach
+                <a href="#" class="button">Load More</a>
+            </div>
+        </div>
+    </section>
+    <section id="features">
+        <div class="container">
+            <div class="features-container">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="{{ asset('images/buy-comics-digital-comics.png') }}" alt="Digital Comics">
+                    </div>
+                    <p class="feature-name uppercase">
+                        Digital Comics
+                    </p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="{{ asset('images/buy-comics-merchandise.png') }}" alt="DC Merchandise">
+                    </div>
+                    <p class="feature-name uppercase">
+                        DC Merchandise
+                    </p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="{{ asset('images/buy-comics-subscriptions.png') }}" alt="Subscription">
+                    </div>
+                    <p class="feature-name uppercase">
+                        Subscription
+                    </p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="{{ asset('images/buy-comics-shop-locator.png') }}" alt="Comic Shop Locator">
+                    </div>
+                    <p class="feature-name uppercase">
+                        Comic Shop Locator
+                    </p>
+                </div><div class="feature">
+                    <div class="feature-icon">
+                        <img src="{{ asset('images/buy-dc-power-visa.svg') }}" alt="DC Power Visa">
+                    </div>
+                    <p class="feature-name uppercase">
+                        DC Power Visa
+                    </p>
+                </div>
             </div>
         </div>
     </section>
