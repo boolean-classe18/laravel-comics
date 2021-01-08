@@ -121,6 +121,8 @@
 
 #comic-details {
     background-color: #F6F6F6;
+    border-top: 1px solid $details_border;
+    padding-bottom: 60px;
 
     .talent, .specs {
         width: calc(50% - #{$column_spacing});
@@ -138,8 +140,12 @@
             li {
                 @include flexbox(row, flex-start, flex-start);
                 border-top: 1px solid #e3e3e3;
-                padding: 5px 0;
+                padding: 10px 0;
                 font-weight: 600;
+
+                &:last-child {
+                    border-bottom: 1px solid $details_border;
+                }
 
                 span:first-child {
                     min-width: calc(100% / 3);
@@ -166,13 +172,37 @@
     .specs {
         margin-left: $column_spacing;
     }
+}
+
+#comic-bottom {
+    background-color: #F6F6F6;
+    border-top: 1px solid $details_border;
 
     .icon-box-container {
         @include flexbox;
 
         .icon-box {
-            border: 1px solid black;
+            border-left: 1px solid $details_border;
             flex-grow: 1;
+            padding: 10px;
+
+            &:hover {
+                background-color: $icon_box_bg_color_hover;
+
+                a {
+                    color: $title_color;
+                }
+            }
+
+            &:last-child {
+                border-right: 1px solid $details_border;
+            }
+
+            a {
+                @include flexbox(row, space-between, flex-start);
+                color: $secondary_text_color;
+                font-family: $title_font;
+            }
 
             .icon-box-image {
                 background-image: url('/images/cta-icons.png');
@@ -192,46 +222,6 @@
                     }
                 }
             }
-            //
-            // &:nth-child(1){
-            //     .icon-box-image {
-            //         background-position: 0 0;
-            //     }
-            //
-            //     &:hover .icon-box-image {
-            //         background-position: 0 37px;
-            //     }
-            // }
-            //
-            // &:nth-child(2) {
-            //     .icon-box-image {
-            //         background-position: 37px 0;
-            //     }
-            //
-            //     &:hover .icon-box-image {
-            //         background-position: 37px 37px;
-            //     }
-            // }
-            //
-            // &:nth-child(3) {
-            //     .icon-box-image {
-            //         background-position: 74px 0;
-            //     }
-            //
-            //     &:hover .icon-box-image {
-            //         background-position: 74px 37px;
-            //     }
-            // }
-            //
-            // &:nth-child(4) {
-            //     .icon-box-image {
-            //         background-position: 111px 0;
-            //     }
-            //
-            //     &:hover .icon-box-image {
-            //         background-position: 111px 37px;
-            //     }
-            // }
         }
 
     }

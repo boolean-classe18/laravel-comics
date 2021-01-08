@@ -88,6 +88,8 @@
                 </ul>
             </div>
         </div>
+    </section>
+    <section id="comic-bottom">
         <div class="small-container">
             <div class="icon-box-container">
                 <div class="icon-box">
