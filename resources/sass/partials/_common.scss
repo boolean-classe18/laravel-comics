@@ -21,6 +21,15 @@ a {
     text-decoration: none;
 }
 
+.button {
+    background: $main_color;
+    color: $main_bg_text_color;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    padding: 10px 60px;
+    text-transform: uppercase;
+}
+
 p {
     margin: 0;
 }

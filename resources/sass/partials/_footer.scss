@@ -1,0 +1,121 @@
+.footer-top {
+    background-image: url('/images/footer-bg.jpg');
+    background-size: cover;
+
+    .footer-top-inner {
+        padding: 40px 0;
+        background-image: url('/images/dc-logo-bg.png');
+        background-position: right;
+        background-repeat: no-repeat;
+
+        .footer-top-upper {
+            @include flexbox(row, flex-start, flex-start);
+
+            .footer-top-menu {
+                padding-right: 30px;
+
+                .footer-top-menu-title {
+                    color: $footer_title_color;
+                    font-size: 21px;
+                    margin: 0 0 15px 0;
+                }
+
+                ul {
+                    list-style-type: none;
+                    margin: 0 0 20px 0;
+                    padding: 0;
+
+                    li {
+                        margin: 4px 0;
+
+                        a {
+                            color: $footer_text_color;
+                            font-size: 12px;
+
+                            &:hover {
+                                color: $main_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-top-copy {
+
+        p {
+            color: $footer_text_color;
+            font-size: 12px;
+            margin: 0;
+
+            a {
+                color: $main_color;
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    background: $footer_bg_color;
+    padding: 30px 0;
+
+    .footer-bottom-left, .footer-bottom-right {
+        float: left;
+        width: 50%;
+    }
+
+    .cta {
+        background: transparent;
+        border: 2px solid $main_color;
+        display: inline-block;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        padding: 14px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: $main_color;
+        }
+    }
+
+    .social {
+        @include flexbox(row, flex-end, center);
+
+        .social-title {
+            color: $main_color;
+            font-size: 22px;
+            line-height: 50px;
+            margin: 0 15px 0 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li{
+                display: inline-block;
+                margin-left: 15px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            @each $icon in $footer_socials {
+                li.#{$icon} {
+                    background-image: url('/images/footer-#{$icon}.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            a {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
