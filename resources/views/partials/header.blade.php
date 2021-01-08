@@ -57,7 +57,9 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="search"></div>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                </div>
             </div>
         </div>
     </div>
